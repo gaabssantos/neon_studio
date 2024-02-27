@@ -3,6 +3,7 @@ import login from "../../assets/icons/navbar/login.svg";
 import menu from "../../assets/icons/navbar/menu.svg";
 import sports from "../../assets/icons/navbar/sports.svg";
 import logo from "../../assets/logo.png";
+import { ButtonApp } from "../index";
 import {
   Container,
   Title,
@@ -10,7 +11,6 @@ import {
   ItemContent,
   Divisor,
   Login,
-  Signin,
   Signup,
 } from "./styles";
 
@@ -38,10 +38,10 @@ export const Navbar = () => {
       </div>
       <Login>
         <Signup>Registre-se</Signup>
-        <Signin>
+        <ButtonApp>
           <img src={login} alt="login" />
           Entrar
-        </Signin>
+        </ButtonApp>
       </Login>
     </Container>
   );
