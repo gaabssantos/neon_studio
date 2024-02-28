@@ -10,32 +10,19 @@ export const Container = styled.div`
 
   .menu {
     cursor: pointer;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
+
+    @media (max-width: 800px) {
+      display: none;
+    }
   }
 
   .first-column {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-
-    @media (max-width: 600px) {
-      display: block;
-
-      .menu {
-        display: none;
-      }
-    }
-
-    @media (max-width: 800px) {
-      display: block;
-
-      .menu {
-        display: none;
-      }
-    }
-  }
-
-  @media (max-width: 600px) {
-    display: block;
   }
 `;
 
@@ -47,6 +34,10 @@ export const Title = styled.h1`
   line-height: 20px;
   margin-left: 10px;
   margin-right: 140px;
+
+  @media (max-width: 600px) {
+    display: block;
+  }
 `;
 
 export const Item = styled.div`
@@ -59,6 +50,14 @@ export const Item = styled.div`
   line-height: 21px;
   text-transform: uppercase;
   cursor: pointer;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;
 
 export const ItemContent = styled.div`
@@ -74,23 +73,23 @@ export const Divisor = styled.div`
   background: ${(props) =>
     props.isActive && "linear-gradient(270deg, #6c1d79 0.1%, #ff003d 102.93%)"};
   cursor: auto;
-
-  @media (max-width: 600px) {
-    background: none;
-  }
-
-  @media (max-width: 800px) {
-    background: none;
-  }
-
-  @media (max-width: 855px) {
-    background: none;
-  }
 `;
 
 export const Login = styled.div`
   display: flex;
   justify-content: center;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
+
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
 `;
 
 export const Signup = styled.button`

@@ -1,8 +1,8 @@
-import casino from "../../assets/icons/navbar/casino.svg";
-import login from "../../assets/icons/navbar/login.svg";
-import menu from "../../assets/icons/navbar/menu.svg";
-import sports from "../../assets/icons/navbar/sports.svg";
-import logo from "../../assets/logo.png";
+import Casino from "../../assets/icons/navbar/casino.svg";
+import LoginImg from "../../assets/icons/navbar/login.svg";
+import Menu from "../../assets/icons/navbar/menu.svg";
+import Sports from "../../assets/icons/navbar/sports.svg";
+import Logo from "../../assets/logo.png";
 import { ButtonApp } from "../index";
 import {
   Container,
@@ -18,19 +18,19 @@ export const Navbar = () => {
   return (
     <Container>
       <div className="first-column">
-        <img src={logo} alt="logo-neon" />
+        <img src={Logo} alt="logo-neon" />
         <Title>Neon Studio</Title>
-        <img className="menu" src={menu} alt="menu-hamburger" />
+        <img className="menu" src={Menu} alt="menu-hamburger" />
         <Item>
           <ItemContent>
-            <img src={casino} alt="navbar-cassino" />
+            <img src={Casino} alt="navbar-cassino" />
             <p>Cassino</p>
           </ItemContent>
           <Divisor isActive={true} />
         </Item>
         <Item>
           <ItemContent>
-            <img src={sports} alt="navbar-esportes" />
+            <img src={Sports} alt="navbar-esportes" />
             <p>Esportes</p>
           </ItemContent>
           <Divisor isActive={false} />
@@ -39,7 +39,7 @@ export const Navbar = () => {
       <Login>
         <Signup>Registre-se</Signup>
         <ButtonApp>
-          <img src={login} alt="login" />
+          <img src={LoginImg} alt="login" />
           Entrar
         </ButtonApp>
       </Login>
