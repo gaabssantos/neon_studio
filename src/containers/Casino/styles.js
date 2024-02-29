@@ -32,7 +32,8 @@ export const Input = styled.input`
 
 export const Categories = styled.div`
   display: flex;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 25px;
   margin-top: 55px;
 `;
 
@@ -40,6 +41,7 @@ export const Category = styled.div`
   width: 60px;
   height: 60px;
   border-radius: 60px;
+  margin-top: 15px;
   background: linear-gradient(
     270deg,
     rgba(108, 29, 121, 0.15) 0.1%,
@@ -66,4 +68,31 @@ export const CategoryName = styled.p`
   font-weight: 600;
   line-height: 13.6px;
   margin-top: 5px;
+`;
+
+export const Recommended = styled.div`
+  margin-top: 60px;
+`;
+
+export const RecommendedTitle = styled.h2`
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+`;
+
+export const RecommendedImages = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`;
+
+export const RecommendedImage = styled.img`
+  margin-top: 5px;
+  width: 330px;
+  cursor: pointer;
+
+  @media (max-width: 600px) {
+    width: 220px;
+  }
 `;

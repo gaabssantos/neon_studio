@@ -1,7 +1,7 @@
 import Banner from "../../assets/casino/casino-banner.png";
-import Sports from "../../assets/casino/icons/sports.svg";
 import MagnifyingGlass from "../../assets/casino/magnifying_glass.svg";
 import categories from "./categories-list";
+import recommended from "./recommended-list";
 import {
   Container,
   Image,
@@ -10,6 +10,10 @@ import {
   Categories,
   Category,
   CategoryName,
+  Recommended,
+  RecommendedTitle,
+  RecommendedImages,
+  RecommendedImage,
 } from "./styles";
 
 const Casino = () => {
@@ -30,6 +34,18 @@ const Casino = () => {
           </Category>
         ))}
       </Categories>
+      <Recommended>
+        <RecommendedTitle>Recomendados</RecommendedTitle>
+        <RecommendedImages>
+          {recommended.map((recom) => (
+            <RecommendedImage
+              key={recom.id}
+              src={recom.image}
+              alt={recom.slug}
+            />
+          ))}
+        </RecommendedImages>
+      </Recommended>
     </Container>
   );
 };
