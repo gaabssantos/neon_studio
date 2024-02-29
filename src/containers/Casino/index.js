@@ -1,5 +1,6 @@
 import Banner from "../../assets/casino/casino-banner.png";
 import MagnifyingGlass from "../../assets/casino/magnifying_glass.svg";
+import { Games } from "../../components";
 import categories from "./categories-list";
 import recommended from "./recommended-list";
 import {
@@ -46,6 +47,7 @@ const Casino = () => {
           ))}
         </RecommendedImages>
       </Recommended>
+      <Games />
     </Container>
   );
 };

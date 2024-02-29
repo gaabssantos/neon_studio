@@ -26,14 +26,14 @@ export const Navbar = () => {
             <img src={Casino} alt="navbar-cassino" />
             <p>Cassino</p>
           </ItemContent>
-          <Divisor isActive={true} />
+          <Divisor $isactive={true} />
         </Item>
         <Item>
           <ItemContent>
             <img src={Sports} alt="navbar-esportes" />
             <p>Esportes</p>
           </ItemContent>
-          <Divisor isActive={false} />
+          <Divisor $isactive={false} />
         </Item>
       </div>
       <Login>

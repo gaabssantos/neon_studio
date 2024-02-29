@@ -10,12 +10,16 @@ export const Button = styled.button`
 
   color: #fff;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 600;
   line-height: 24px;
 
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
 
   img {
     position: relative;

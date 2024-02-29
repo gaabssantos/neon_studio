@@ -68,6 +68,10 @@ export const CategoryName = styled.p`
   font-weight: 600;
   line-height: 13.6px;
   margin-top: 5px;
+
+  &:hover {
+    opacity: 0.7;
+  }
 `;
 
 export const Recommended = styled.div`
@@ -91,6 +95,10 @@ export const RecommendedImage = styled.img`
   margin-top: 5px;
   width: 330px;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
 
   @media (max-width: 600px) {
     width: 220px;

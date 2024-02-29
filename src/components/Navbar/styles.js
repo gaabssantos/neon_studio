@@ -70,8 +70,8 @@ export const Divisor = styled.div`
   top: 31px;
   width: 110px;
   height: 3px;
-  background: ${(props) =>
-    props.isActive && "linear-gradient(270deg, #6c1d79 0.1%, #ff003d 102.93%)"};
+  background: ${({ $isactive }) =>
+    $isactive && "linear-gradient(270deg, #6c1d79 0.1%, #ff003d 102.93%)"};
   cursor: auto;
 `;
 

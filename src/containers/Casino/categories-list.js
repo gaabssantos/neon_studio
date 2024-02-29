@@ -79,7 +79,7 @@ const categories = [
     slug: "roleta",
   },
   {
-    id: 12,
+    id: 13,
     name: "Football studio",
     image: Football,
     slug: "futebol-studio",
