@@ -38,6 +38,11 @@ export const CategoryName = styled.p`
   cursor: pointer;
   display: flex;
   align-items: center;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.5;
+  }
 `;
 
 export const CategoryImg = styled.img`
