@@ -63,6 +63,10 @@ export const Item = styled.div`
 export const ItemContent = styled.div`
   display: flex;
   gap: 10px;
+
+  &:hover {
+    opacity: 0.7;
+  }
 `;
 
 export const Divisor = styled.div`

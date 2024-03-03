@@ -1,8 +1,11 @@
+import { useContext } from "react";
+
 import Casino from "../../assets/icons/navbar/casino.svg";
 import LoginImg from "../../assets/icons/navbar/login.svg";
 import Menu from "../../assets/icons/navbar/menu.svg";
 import Sports from "../../assets/icons/navbar/sports.svg";
 import Logo from "../../assets/logo.png";
+import { NavbarContext } from "../../context/NavbarContext";
 import { ButtonApp } from "../index";
 import {
   Container,
@@ -15,12 +18,19 @@ import {
 } from "./styles";
 
 export const Navbar = () => {
+  const { showIcons, setShowIcons } = useContext(NavbarContext);
+
   return (
     <Container>
       <div className="first-column">
         <img src={Logo} alt="logo-neon" />
         <Title>Neon Studio</Title>
-        <img className="menu" src={Menu} alt="menu-hamburger" />
+        <img
+          onClick={() => setShowIcons(!showIcons)}
+          className="menu"
+          src={Menu}
+          alt="menu-hamburger"
+        />
         <Item>
           <ItemContent>
             <img src={Casino} alt="navbar-cassino" />

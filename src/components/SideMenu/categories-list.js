@@ -15,151 +15,153 @@ import Tennis from "../../assets/icons/categories/sports/tennis.svg";
 import VirtualGames from "../../assets/icons/categories/sports/virtual_games.svg";
 import Volley from "../../assets/icons/categories/sports/volley.svg";
 
-export const casino = [
+const allCategories = [
   {
     id: 1,
-    name: "Todos os jogos",
-    image: AllGames,
-    slug: "todos-os-jogos",
+    name: "Casino",
+    categories: [
+      {
+        id: 1,
+        name: "Todos os jogos",
+        image: AllGames,
+        slug: "todos-os-jogos",
+      },
+      {
+        id: 2,
+        name: "Jogos slots",
+        image: SlotsGames,
+        slug: "jogos-slots",
+      },
+      {
+        id: 3,
+        name: "Cassino ao vivo",
+        image: LiveCasino,
+        slug: "cassino-ao-vivo",
+      },
+      {
+        id: 4,
+        name: "Mines",
+        image: Mines,
+        slug: "mines",
+      },
+      {
+        id: 5,
+        name: "Fortune Tiger",
+        image: FortuneTiger,
+        slug: "fortune-tiger",
+      },
+      {
+        id: 6,
+        name: "Aviator",
+        image: Aviator,
+        slug: "aviator",
+      },
+      {
+        id: 7,
+        name: "Provedores",
+        image: Providers,
+        slug: "provedores",
+      },
+    ],
   },
   {
     id: 2,
-    name: "Jogos slots",
-    image: SlotsGames,
-    slug: "jogos-slots",
-  },
-  {
-    id: 3,
-    name: "Cassino ao vivo",
-    image: LiveCasino,
-    slug: "cassino-ao-vivo",
-  },
-  {
-    id: 4,
-    name: "Mines",
-    image: Mines,
-    slug: "mines",
-  },
-  {
-    id: 5,
-    name: "Fortune Tiger",
-    image: FortuneTiger,
-    slug: "fortune-tiger",
-  },
-  {
-    id: 6,
-    name: "Aviator",
-    image: Aviator,
-    slug: "aviator",
-  },
-  {
-    id: 7,
-    name: "Provedores",
-    image: Providers,
-    slug: "provedores",
+    name: "Esportes",
+    categories: [
+      {
+        id: 1,
+        name: "Jogos ao vivo",
+        image: LiveGames,
+        slug: "jogos-ao-vivo",
+      },
+      {
+        id: 2,
+        name: "Próximos jogos",
+        image: NextGames,
+        slug: "próximos-jogos",
+      },
+      {
+        id: 3,
+        name: "E-sports",
+        image: Esports,
+        slug: "e-sports",
+      },
+      {
+        id: 4,
+        name: "Campeonatos",
+        isTitle: true,
+        categories: [
+          {
+            id: 1,
+            name: "Brasileirão Série A",
+            image: Championship,
+            slug: "brasileirão-série-a",
+          },
+          {
+            id: 2,
+            name: "Copa Libertadores",
+            image: Championship,
+            slug: "copa-libertadores",
+          },
+          {
+            id: 3,
+            name: "Campeonato Inglês",
+            image: Championship,
+            slug: "campeonato-inglês",
+          },
+          {
+            id: 4,
+            name: "Campeonato Espanhol",
+            image: Championship,
+            slug: "campeonato-espanhol",
+          },
+          {
+            id: 5,
+            name: "Campeonato Italiano",
+            image: Championship,
+            slug: "campeonato-italiano",
+          },
+        ],
+      },
+      {
+        id: 5,
+        name: "Top 5 esportes",
+        isTitle: true,
+        categories: [
+          {
+            id: 1,
+            name: "Futebol",
+            image: Soccer,
+            slug: "futebol",
+          },
+          {
+            id: 2,
+            name: "Basquete",
+            image: Basketball,
+            slug: "basquete",
+          },
+          {
+            id: 3,
+            name: "Tênis",
+            image: Tennis,
+            slug: "tênis",
+          },
+          {
+            id: 4,
+            name: "Vôlei",
+            image: Volley,
+            slug: "vôlei",
+          },
+          {
+            id: 5,
+            name: "Esportes Virtuais",
+            image: Esports,
+            slug: "esportes-virtuais",
+          },
+        ],
+      },
+    ],
   },
 ];
 
-export const sports = [
-  {
-    id: 1,
-    name: "Jogos ao vivo",
-    image: LiveGames,
-    slug: "jogos-ao-vivo",
-    isTitle: false,
-  },
-  {
-    id: 2,
-    name: "Próximos jogos",
-    image: NextGames,
-    slug: "proximos-jogos",
-    isTitle: false,
-  },
-  {
-    id: 3,
-    name: "E-sports",
-    image: Esports,
-    slug: "e-sports",
-    isTitle: false,
-  },
-  {
-    id: 4,
-    name: "Campeonatos",
-    isTitle: true,
-  },
-  {
-    id: 5,
-    name: "Brasileirão Série A",
-    image: Championship,
-    slug: "brasileirao-serie-a",
-    isTitle: false,
-  },
-  {
-    id: 6,
-    name: "Copa Libertadores",
-    image: Championship,
-    slug: "copa-libertadores",
-    isTitle: false,
-  },
-  {
-    id: 7,
-    name: "Campeonato Inglês",
-    image: Championship,
-    slug: "campeonato-ingles",
-    isTitle: false,
-  },
-  {
-    id: 8,
-    name: "Campeonato Espanhol",
-    image: Championship,
-    slug: "campeonato-espanhol",
-    isTitle: false,
-  },
-  {
-    id: 9,
-    name: "Campeonato Italiano",
-    image: Championship,
-    slug: "campeonato-italiano",
-    isTitle: false,
-  },
-  {
-    id: 10,
-    name: "Top 5 esportes",
-    isTitle: true,
-  },
-  {
-    id: 11,
-    name: "Futebol",
-    image: Soccer,
-    slug: "futebol",
-    isTitle: false,
-  },
-  {
-    id: 12,
-    name: "Basquete",
-    image: Basketball,
-    slug: "basquete",
-    isTitle: false,
-  },
-  {
-    id: 13,
-    name: "Tênis",
-    image: Tennis,
-    slug: "tenis",
-    isTitle: false,
-  },
-  {
-    id: 14,
-    name: "Vôlei",
-    image: Volley,
-    slug: "volei",
-    isTitle: false,
-  },
-  {
-    id: 15,
-    name: "Esportes Virtuais",
-    image: VirtualGames,
-    slug: "esportes-virtuais",
-    isTitle: false,
-  },
-];
+export default allCategories;
