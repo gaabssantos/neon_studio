@@ -1,0 +1,17 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="material-symbols:star" clip-path="url(#clip0_1_1306)">
+<g id="Vector">
+<path d="M3.825 20L5.45 12.6053L0 7.63158L7.2 6.97368L10 0L12.8 6.97368L20 7.63158L14.55 12.6053L16.175 20L10 16.0789L3.825 20Z" fill="black"/>
+<path d="M3.825 20L5.45 12.6053L0 7.63158L7.2 6.97368L10 0L12.8 6.97368L20 7.63158L14.55 12.6053L16.175 20L10 16.0789L3.825 20Z" fill="url(#paint0_linear_1_1306)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_1_1306" x1="20" y1="13.1852" x2="-0.624584" y2="13.1271" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6C1D79"/>
+<stop offset="1" stop-color="#FF003D"/>
+</linearGradient>
+<clipPath id="clip0_1_1306">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>

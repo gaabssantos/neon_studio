@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 import Casino from "../../assets/icons/navbar/casino.svg";
 import LoginImg from "../../assets/icons/navbar/login.svg";
@@ -19,6 +20,8 @@ import {
 
 export const Navbar = () => {
   const { showIcons, setShowIcons } = useContext(NavbarContext);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <Container>
@@ -32,18 +35,18 @@ export const Navbar = () => {
           alt="menu-hamburger"
         />
         <Item>
-          <ItemContent>
+          <ItemContent onClick={() => navigate("/")}>
             <img src={Casino} alt="navbar-cassino" />
             <p>Cassino</p>
           </ItemContent>
-          <Divisor $isactive={true} />
+          <Divisor $isactive={location.pathname === "/"} />
         </Item>
         <Item>
-          <ItemContent>
+          <ItemContent onClick={() => navigate("/esportes")}>
             <img src={Sports} alt="navbar-esportes" />
             <p>Esportes</p>
           </ItemContent>
-          <Divisor $isactive={false} />
+          <Divisor $isactive={location.pathname === "/esportes"} />
         </Item>
       </div>
       <Login>

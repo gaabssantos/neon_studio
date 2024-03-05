@@ -155,7 +155,7 @@ const allCategories = [
           {
             id: 5,
             name: "Esportes Virtuais",
-            image: Esports,
+            image: VirtualGames,
             slug: "esportes-virtuais",
           },
         ],

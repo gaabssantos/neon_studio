@@ -26,7 +26,11 @@ export const Games = () => {
           </GamesHeader>
           <GamesContainer>
             {game.games.map((gameCard) => (
-              <GameImage key={gameCard.id} src={gameCard.image} />
+              <GameImage
+                key={gameCard.id}
+                src={gameCard.image}
+                alt={gameCard.slug}
+              />
             ))}
           </GamesContainer>
         </div>

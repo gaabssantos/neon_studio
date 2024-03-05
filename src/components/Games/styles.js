@@ -63,4 +63,5 @@ export const GameImage = styled.img`
   cursor: pointer;
   margin-top: 10px;
   margin-right: 25px;
+  position: relative;
 `;

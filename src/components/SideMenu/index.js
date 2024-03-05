@@ -35,13 +35,17 @@ export const SideMenu = () => {
               if (!games.isTitle) {
                 return (
                   <CategoryName key={games.id}>
-                    <CategoryImg src={games.image} alt={games.slug} />
+                    <CategoryImg
+                      key={games.id}
+                      src={games.image}
+                      alt={games.slug}
+                    />
                     {games.name}
                   </CategoryName>
                 );
               } else {
                 return (
-                  <>
+                  <div key={games.id}>
                     <Category>
                       <CategoryTitle>{games.name}</CategoryTitle>
                     </Category>
@@ -51,7 +55,7 @@ export const SideMenu = () => {
                         {cate.name}
                       </CategoryName>
                     ))}
-                  </>
+                  </div>
                 );
               }
             } else {

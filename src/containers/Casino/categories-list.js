@@ -73,13 +73,13 @@ const categories = [
     slug: "esportes",
   },
   {
-    id: 12,
+    id: 11,
     name: "Roleta ao vivo",
     image: LiveRoulete,
     slug: "roleta",
   },
   {
-    id: 13,
+    id: 12,
     name: "Football studio",
     image: Football,
     slug: "futebol-studio",
