@@ -17,7 +17,7 @@ import TargetSolid from "../../assets/sports/icons/target_solid.svg";
 import Tennis from "../../assets/sports/icons/tennis.svg";
 import Volley from "../../assets/sports/icons/volley.svg";
 
-const sportsCategories = [
+export const leaguesCategories = [
   {
     id: 1,
     name: "Brasileirão Série A",
@@ -74,7 +74,7 @@ const sportsCategories = [
   },
 ];
 
-export const sports = [
+export const sportsCategories = [
   {
     id: 1,
     name: "Futebol",
@@ -130,5 +130,3 @@ export const sports = [
     image: Boxing,
   },
 ];
-
-export default sportsCategories;
