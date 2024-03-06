@@ -2,6 +2,7 @@ import Field from "../../assets/sports/field.png";
 import Soccer from "../../assets/sports/icons/soccer.svg";
 import Team1 from "../../assets/sports/icons/team1.png";
 import Team2 from "../../assets/sports/icons/team2.png";
+import Informations from "../../assets/sports/informations.png";
 import {
   TeamName,
   InfosContainer,
@@ -13,6 +14,8 @@ import {
   GameInfo,
   GameScore,
   GameTime,
+  FieldImg,
+  GameInformations,
 } from "./styles";
 
 export const GamesInfo = () => {
@@ -36,7 +39,8 @@ export const GamesInfo = () => {
           <TeamName>Hapoel Kfar Kana</TeamName>
         </GameInfo>
         <GameTime>0:0|0:0</GameTime>
-        <img src={Field} alt="campo" />
+        <FieldImg src={Field} alt="campo" />
+        <GameInformations src={Informations} alt="informations" />
       </Game>
     </InfosContainer>
   );

@@ -1,5 +1,6 @@
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 import { NavbarContext } from "../../context/NavbarContext";
 import { ButtonApp } from "../Button";
@@ -18,6 +19,7 @@ import {
 
 export const SideMenu = () => {
   const { showIcons } = useContext(NavbarContext);
+  const [isOpen, setIsOpen] = useState([]);
 
   return (
     <Container $showicon={!showIcons}>
@@ -28,53 +30,77 @@ export const SideMenu = () => {
         <Categories key={category.id}>
           <Category>
             <CategoryTitle>{category.name}</CategoryTitle>
-            <KeyboardArrowUpIcon style={{ cursor: "pointer" }} />
+            {!isOpen.includes(category.id) ? (
+              <KeyboardArrowUpIcon
+                style={{ color: "#fff", cursor: "pointer" }}
+                onClick={() => {
+                  setIsOpen([...isOpen, category.id]);
+                }}
+              />
+            ) : (
+              <KeyboardArrowDownIcon
+                style={{ color: "#fff", cursor: "pointer" }}
+                onClick={() => {
+                  const newArr = isOpen.filter((id) => id !== category.id);
+
+                  setIsOpen(newArr);
+                }}
+              />
+            )}
           </Category>
           {category.categories.map((games) => {
             if (!showIcons) {
               if (!games.isTitle) {
-                return (
-                  <CategoryName key={games.id}>
-                    <CategoryImg
-                      key={games.id}
-                      src={games.image}
-                      alt={games.slug}
-                    />
-                    {games.name}
-                  </CategoryName>
-                );
+                if (!isOpen.includes(category.id)) {
+                  return (
+                    <CategoryName key={games.id}>
+                      <CategoryImg
+                        key={games.id}
+                        src={games.image}
+                        alt={games.slug}
+                      />
+                      {games.name}
+                    </CategoryName>
+                  );
+                }
               } else {
-                return (
-                  <div key={games.id}>
-                    <Category>
-                      <CategoryTitle>{games.name}</CategoryTitle>
-                    </Category>
-                    {games.categories.map((cate) => (
-                      <CategoryName key={cate.id}>
-                        <CategoryImg src={cate.image} alt={cate.slug} />
-                        {cate.name}
-                      </CategoryName>
-                    ))}
-                  </div>
-                );
+                if (!isOpen.includes(category.id)) {
+                  return (
+                    <div key={games.id}>
+                      <Category>
+                        <CategoryTitle>{games.name}</CategoryTitle>
+                      </Category>
+                      {games.categories.map((cate) => (
+                        <CategoryName key={cate.id}>
+                          <CategoryImg src={cate.image} alt={cate.slug} />
+                          {cate.name}
+                        </CategoryName>
+                      ))}
+                    </div>
+                  );
+                }
               }
             } else {
               if (!games.isTitle) {
-                return (
-                  <BlockGames key={games.id}>
-                    <CategoryImg src={games.image} alt={games.slug} />
-                  </BlockGames>
-                );
+                if (!isOpen.includes(category.id)) {
+                  return (
+                    <BlockGames key={games.id}>
+                      <CategoryImg src={games.image} alt={games.slug} />
+                    </BlockGames>
+                  );
+                }
               } else {
-                return (
-                  <>
-                    {games.categories.map((cate) => (
-                      <BlockGames key={cate.id}>
-                        <CategoryImg src={cate.image} alt={cate.slug} />
-                      </BlockGames>
-                    ))}
-                  </>
-                );
+                if (!isOpen.includes(category.id)) {
+                  return (
+                    <>
+                      {games.categories.map((cate) => (
+                        <BlockGames key={cate.id}>
+                          <CategoryImg src={cate.image} alt={cate.slug} />
+                        </BlockGames>
+                      ))}
+                    </>
+                  );
+                }
               }
             }
           })}

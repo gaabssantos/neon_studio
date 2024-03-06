@@ -11,6 +11,7 @@ export const InfosContainer = styled.div`
   margin-left: 6px;
   margin-top: 78px;
   background: #323637;
+  height: 420px;
 `;
 
 export const SelectInfoContainer = styled.div`
@@ -77,4 +78,11 @@ export const GameTime = styled.p`
   margin-top: 6px;
 `;
 
-export const GameTable = styled.div``;
+export const FieldImg = styled.img`
+  width: 100%;
+  margin-top: 48px;
+`;
+
+export const GameInformations = styled.img`
+  width: 100%;
+`;
